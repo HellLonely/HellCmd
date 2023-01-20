@@ -16,5 +16,7 @@ def clear():
 
 while scape == False:
     command = str(input("∇ "))
+    print(" ")
     Operator.connect(command)
+    print(" ")
     
