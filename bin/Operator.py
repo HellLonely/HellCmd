@@ -17,6 +17,10 @@ def connect(command):
         path = command.split(' ')[1]
         Dir.cd(path)
 
+    else:
+        print("❌ | Comando no valido ")
+        print("\n     Prueba a usar 'help' o '--help'")
+
     
     
 
