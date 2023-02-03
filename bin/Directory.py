@@ -5,8 +5,13 @@ def DirSimple():
     pathfile = open('bin/path.txt')
     path = str(pathfile.readline())
     with os.scandir(path) as ficheros:
-        print(path+"\n")
+        print("Ruta → "+ path+"\n")
         contadorArchivos = 0
+        space = " "
+
+        print("   Nombre" + space*22+"🧱 Peso")
+        print("   ------"+ space*22+"-------")
+
         for fichero in ficheros:
             contadorArchivos += 1
             fold = '  🗁'
@@ -15,12 +20,16 @@ def DirSimple():
                 fold = " 📝"
 
 
+            numeroLetrasTexto = len(fichero.name)
+            numeroLetrasPonerTexto = 25 - int(numeroLetrasTexto)
+
             fileSizeHeight = os.stat(fichero).st_size
 
             ti_m = os.path.getmtime(fichero)
             m_ti = time.ctime(ti_m)
 
-            print(" ↳ " + fichero.name + fold + "                   🖊️ : "+ m_ti+"       🧱 Peso: " + str(fileSizeHeight) + " Bites")
+            #print(" ↳ " + fichero.name + fold + "                   🖊️ : "+ m_ti+"       🧱 Peso: " + str(fileSizeHeight) + " Bites")
+            print(" ↳ " + fichero.name + fold + space * numeroLetrasPonerTexto + str(fileSizeHeight))
         print("\n Elementos : " + str(contadorArchivos))
 
 def cd(path):
