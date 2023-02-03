@@ -13,6 +13,8 @@ def connect(command):
         exit()
     elif command == 'dir' or command =='ls':
         Dir.DirSimple()
+    elif command == 'disk' or command =='managerDisk':
+        Dir.disckManager()
     elif command.startswith('cd'):
         path = command.split(' ')[1]
         Dir.cd(path)

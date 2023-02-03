@@ -19,7 +19,6 @@ def DirSimple():
             if folder == True:
                 fold = " 📝"
 
-
             numeroLetrasTexto = len(fichero.name)
             numeroLetrasPonerTexto = 25 - int(numeroLetrasTexto)
 
@@ -43,11 +42,17 @@ def cd(path):
         pathfile.close()
     elif path.startswith(".."):
         pathfile = open('bin/path.txt')
+
         pathorigin = str(pathfile.readline())
+
         paths = pathorigin.split('/')[0]
+
         pathfile = open('bin/path.txt', 'w')
+
         print("Te has movido con exito al disco "+paths+":")
+
         pathfile.write(str(paths))
+
         pathfile.close()
     elif path == ('root'):
         pathfile = open('bin/path.txt')
@@ -57,4 +62,10 @@ def cd(path):
         pathfile.write(str(str(paths)+":"))
         print("Te has movido con exito al disco "+paths+":")
         pathfile.close()
+
+
+
+def disckManager():
+
+    outputDiskManager = os.system('fsutil fsinfo drives')
 
