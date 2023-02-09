@@ -1,6 +1,7 @@
 import os
 import bin.Help as Help
 import bin.Directory as Dir
+import bin.SQL as SQL
 
 
 def connect(command):
@@ -18,6 +19,8 @@ def connect(command):
     elif command.startswith('cd'):
         path = command.split(' ')[1]
         Dir.cd(path)
+    elif command == 'sql' or command == '--sql':
+        SQL.connection()
 
     else:
         print("❌ | Comando no valido ")
