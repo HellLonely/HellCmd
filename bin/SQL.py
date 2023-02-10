@@ -30,17 +30,17 @@ def connection():
         maintext = str(db).replace(',', ' ', 2).replace('(', ' ').replace(')', ' ')
         print(maintext, end="|")
 
-    db_database = input("\nQue base de datos vas a usar? \n🐬 -> ")
+    db_database = input("\n\nQue base de datos vas a usar? \n🐬 -> ")
     print(" ")
 
     db_cursor.execute("use "+ db_database +";")
 
     while in_bd_system == 1:
         contadorTuplas = 0
-        querry = input("Introduce la consulta a realizar \n🐬 -> ")
+        querry = input("Introduce la consulta a realizar.\n'exit' para salir.\n🐬 -> ")
 
         if querry == 'exit':
-            print('exit')
+            in_bd_system = 2
         else:
             db_cursor.execute("\n" + str(querry))
 
