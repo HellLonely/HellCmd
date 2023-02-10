@@ -30,3 +30,11 @@ dir
 Aqui un ejemplo en ejecución
 
 ![](/img/img1.png)
+
+### SQL 🐬
+
+Lleva integrado un módulo para el tratamiento de bases de dato de una manera muy simple.
+
+(⚠ Aun esta en desarrollo puede tener algun problema)
+
+![](/img/img2.png)
