@@ -2,6 +2,17 @@
 
 Proyecto de una consola básica con funcionalidades para varios programas o juegos.
 
+
+## Rerquerimientos
+
+Biblioteca de SQL Connector
+
+```cmd
+pip3 install mysql-connector
+pip install mysql-connector-python
+```
+
+
 ## Funcionalidades 🔧
 
 ### Directorios 📁
