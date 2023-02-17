@@ -12,24 +12,25 @@ def CargarImagen():
     ruta_imagen = input("Pon la ruta de tu imagen. \n I -> ")
     image_format = input(" \n Formato de la imagen. (webp,jpg,png...) \n I -> ")
 
-    im = Image.open(ruta_imagen)
-    rgb_im = im.convert('RGB')
-
-    split_image = ruta_imagen.split('.')
-
-
-    ruta_conversion = split_image[0]
-    print("\n El formato de la imagen es ."+ split_image[1])
-
     try:
+
+        im = Image.open(ruta_imagen)
+        rgb_im = im.convert('RGB')
+
+        split_image = ruta_imagen.split('.')
+
+        ruta_conversion = split_image[0]
+        print("\n El formato de la imagen es ." + split_image[1])
+
         rgb_im.save(ruta_conversion + "-convert." + image_format, quality=100)
         print("La imagen se ha convertido con exito a " + image_format)
 
     except:
         print("No se ha podido convertir.\n Prueba otra vez.. \n")
+        CargarImagen()
 
-        #Pendiente de hacer .....
 
+        #Pendiente de hacer ....
 
 
 # Diccionario de formatos escalables de imagenes
