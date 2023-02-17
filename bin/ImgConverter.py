@@ -21,7 +21,14 @@ def CargarImagen():
     ruta_conversion = split_image[0]
     print("\n El formato de la imagen es ."+ split_image[1])
 
-    rgb_im.save(ruta_conversion+"-convert."+image_format, quality = 100)
+    try:
+        rgb_im.save(ruta_conversion + "-convert." + image_format, quality=100)
+        print("La imagen se ha convertido con exito a " + image_format)
+
+    except:
+        print("No se ha podido convertir.\n Prueba otra vez.. \n")
+
+        #Pendiente de hacer .....
 
 
 
