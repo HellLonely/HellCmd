@@ -10,6 +10,7 @@ def start_module():
 def CargarImagen():
 
     ruta_imagen = input("Pon la ruta de tu imagen. \n I -> ")
+    image_format = input(" \n Formato de la imagen. (webp,jpg,png...) \n I -> ")
 
     im = Image.open(ruta_imagen)
     rgb_im = im.convert('RGB')
@@ -20,7 +21,7 @@ def CargarImagen():
     ruta_conversion = split_image[0]
     print("\n El formato de la imagen es ."+ split_image[1])
 
-    rgb_im.save(ruta_conversion+"-convert.webp", quality = 95)
+    rgb_im.save(ruta_conversion+"-convert."+image_format, quality = 100)
 
 
 
