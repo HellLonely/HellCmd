@@ -2,6 +2,7 @@ import os
 import bin.Help as Help
 import bin.Directory as Dir
 import bin.SQL as SQL
+import bin.ImgConverter as IMG
 
 
 def connect(command):
@@ -16,6 +17,8 @@ def connect(command):
         Dir.DirSimple()
     elif command == 'disk' or command =='managerDisk':
         Dir.disckManager()
+    elif command == 'sicm' or command =='--image':
+        IMG.start_module()
     elif command.startswith('cd'):
         path = command.split(' ')[1]
         Dir.cd(path)

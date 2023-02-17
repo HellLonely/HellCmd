@@ -1,3 +1,3 @@
 Version v0.0.3
-HellMD developed in python
+HellCMD developed in python
 Copyright (c) HellLonely

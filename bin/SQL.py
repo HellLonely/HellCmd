@@ -37,7 +37,7 @@ def connection():
 
     while in_bd_system == 1:
         contadorTuplas = 0
-        querry = input("Introduce la consulta a realizar.\n'exit' para salir.\n🐬 -> ")
+        querry = input("Consola de comandos.\n'exit' para salir.\n🐬 -> ")
 
         if querry == 'exit':
             in_bd_system = 2

@@ -7,3 +7,7 @@ def preset():
 
 def sql_module_deco():
     print("🐬 SQL MODULE | by HellLonely \nPlaneado para lenguaje SQL")
+
+
+def image_converter():
+    print("| Simple Image Converter Module| \n by HellLonely \n")
